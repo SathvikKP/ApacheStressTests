@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Visit Australia</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 20px; }
+        h1 { color: #f39c12; }
+        img { width: 60%; height: auto; border-radius: 5px; }
+        a { display: block; margin-top: 20px; color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h1>Visit Australia</h1>
+    <p>Australia is known for its beaches, wildlife, and Sydney Opera House.</p>
+
+    <img id="slideshow" src="images/Australia1.jpg" alt="Australia Image 1">
+
+    <script>
+        let images = ["images/Australia1.jpg", "images/Australia2.jpg", "images/Australia3.jpg", "images/Australia4.jpg", "images/Australia5.jpg"];
+        let index = 0;
+        function changeImage() {
+            index = (index + 1) % images.length;
+            document.getElementById("slideshow").src = images[index];
+        }
+        setInterval(changeImage, 3000);
+    </script>
+
+    <a href="index.html">Back to Home</a>
+</body>
+</html>
