@@ -33,12 +33,13 @@ Use these files to explore how Apache Tomcat is configured and how performance/s
    - Replace or merge the provided config files (`server.xml`, `web.xml`, `context.xml` and `tomcat-users.xml`) in your Tomcat `conf` directory as needed.  
    - context.html and web.xml has 2 versions depending on if you require cache or not.
 3. **Install JMeter**  
-   - Follow the official JMeter instructions.  
+   - Follow the official JMeter instructions [2].  
    - Use the provided JMeter config scripts (e.g., `.jmx` files) to run the tests that I configured.
    - You can change the test configs by the JMeter GUI app, it is very simple and easy to understand.  
 4. **Install Apache benchmark**
-   - ```bash
-    sudo apt-get install apache2-utils
+   - For Ubuntu-based systems:  
+     ```bash
+     sudo apt-get install apache2-utils
      ```
 ---
 
@@ -85,6 +86,13 @@ Use these files to explore how Apache Tomcat is configured and how performance/s
    - Execute and monitor test results.  
 
 ---
+
+## How to Enable / Disable the Cache
+- You need to change the web.xml and context.xml files to enable / disable the cache.
+- For cache enabled, use the configurations present in `web.xml_cache` and `context.xml_cache`
+- For cache disabled, use the configurations present in `web.xml_orig` and `context.xml_orig`
+- Restart the Tomcat server after enabling / disabling cache to see effects.
+--
 
 ## Notes
 - The included scripts show how to run **Apache Bench** (`ab`) or **JMeter** from a Linux shell.  
